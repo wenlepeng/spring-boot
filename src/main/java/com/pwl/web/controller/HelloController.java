@@ -1,12 +1,15 @@
 package com.pwl.web.controller;
 
-/**
- * Created with IntelliJ IDEA.
- * User: wenlepeng
- * Date: 16-8-25
- * Time: 下午3:03
- */
-@Controller
-@EnableAutoConfiguration
+import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.RequestMapping;
+
+
+@RestController
 public class HelloController {
+
+    @RequestMapping("/")
+    public String index(){
+        return "Greetings from Spring boot!";
+    }
+
 }
